@@ -5,19 +5,20 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
         ArrayList<String> passedCourses = new ArrayList<>();
+        ArrayList<String> passedCourses2 = new ArrayList<>();
         ArrayList<String> canTeach = new ArrayList<>();
+        ArrayList<String> canTeach2 = new ArrayList<>();
         ArrayList<Person> persons = new ArrayList<>();
 
-        canTeach.add("IT-Security");
-        canTeach.add("Programming");
-        passedCourses.add("IT-Security");
-        passedCourses.add("Programming");
-
-
         Person teacher1 = new Teacher("Signe", canTeach);
-        Person teacher2 = new Teacher("Tess", canTeach);
+        Person teacher2 = new Teacher("Tess", canTeach2);
         Person student1 = new Student("Alissa", passedCourses);
-        Person student2 = new Student("Bente", passedCourses);
+        Person student2 = new Student("Bente", passedCourses2);
+
+        canTeach.add("IT-Security");
+        canTeach2.add("Java 1.0");
+        passedCourses.add("IT-Security");
+        passedCourses2.add("Java 1.0");
 
 
         persons.add(student1);
@@ -25,18 +26,9 @@ public class Main {
         persons.add(teacher2);
         persons.add(student2);
 
-        teacher1.addCourse("Webdesign");
-        teacher2.addCourse("Programming");
-
-        student1.addCourse("webdesign");
-        student1.addCourse("IT-Security");
 
         for(Person p : persons){
-            if(p instanceof Teacher){
-
-            }
             p.addCourse("Java 1.0");
-
         }
 
     }

@@ -17,10 +17,10 @@ public class Student extends Person {
         if(!passedCourses.contains(course)){
 
             currentCourses.add(course);
-            System.out.println("This course: " + course + " is not passed and is in your current courses");
+            System.out.println("The student: " + getName() + ". Course: " + course + " is not passed and is in your current courses");
             return true;
         }
-        System.out.println("The course: " + course + " is already passed");
+        System.out.println("The student: " + getName() + ". Course: " + course + " is already passed");
         return false;
     }
 
